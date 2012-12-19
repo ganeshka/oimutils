@@ -57,7 +57,7 @@ public class OIMUtils {
 		oimUtils.createUser("Ganesh");
 		oimUtils.inquireUser("Ganesh");
 		oimUtils.updateUser("Ganesh");
-		oimUtils.searchUser("ganesh.sh.kamble@gmail.com");
+		oimUtils.searchUser("ganesh.kamble@gmail.com");
 		oimUtils.lockAccount("Ganesh");
 		oimUtils.unlockAccount("Ganesh");
 	}
@@ -69,8 +69,8 @@ public class OIMUtils {
 
 		Hashtable<Object, Object> env = new Hashtable<Object, Object>();
 		env.put(OIMClient.JAVA_NAMING_FACTORY_INITIAL, "weblogic.jndi.WLInitialContextFactory");
-		env.put(OIMClient.JAVA_NAMING_PROVIDER_URL, "t3://10.180.25.191:14000");
-		System.setProperty(JAVA_SECURITY_AUTH_LOGIN_CONFIG, "/home/ganeshka/sails/r2b/middleware/com.gsk.oim/config/authwl.conf");
+		env.put(OIMClient.JAVA_NAMING_PROVIDER_URL, "t3://localhost:14000");
+		System.setProperty(JAVA_SECURITY_AUTH_LOGIN_CONFIG, "/home/ganesh/com.gsk.oimutils/config/authwl.conf");
 		System.setProperty(OIM_APP_SERVER_TYPE, WLS);
 		System.setProperty(APPSERVER_TYPE, WLS);
 		oimClient = new OIMClient(env);
@@ -91,7 +91,7 @@ public class OIMUtils {
 		userAttributeValueMap.put(USERS_LOGIN, userId);
 		userAttributeValueMap.put(USERS_FIRST_NAME, "Ganesh");
 		userAttributeValueMap.put(USERS_LAST_NAME, "Kamble");
-		userAttributeValueMap.put(USERS_EMAIL, "ganesh.sh.kamble@hotmail.com");
+		userAttributeValueMap.put(USERS_EMAIL, "ganesh.kamble@hotmail.com");
 		userAttributeValueMap.put(USERS_PASSWORD, "P1ssword");
 		userAttributeValueMap.put(USERS_ROLE, "OTHER");
 		User user = new User("Ganesh", userAttributeValueMap);
@@ -138,7 +138,7 @@ public class OIMUtils {
 		userAttributeValueMap.put(USERS_LOGIN, userId);
 		userAttributeValueMap.put(USERS_FIRST_NAME, "Ganesh");
 		userAttributeValueMap.put(USERS_LAST_NAME, "Kamble");
-		userAttributeValueMap.put(USERS_EMAIL, "ganesh.sh.kamble@hotmail.com");
+		userAttributeValueMap.put(USERS_EMAIL, "ganesh.kamble@hotmail.com");
 		userAttributeValueMap.put(USERS_PASSWORD, "P@ssword");
 		userAttributeValueMap.put(USERS_ROLE, "Other");
 		User retrievedUser = inquireUser("Ganesh");
